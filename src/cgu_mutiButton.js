@@ -7,7 +7,7 @@ const styleArgument = { fontsize: '100px', color: 'red' };
 const multiButton=(num)=>{
     var output=[];
     for(let i=1;i<num+1;++i)
-        output.push(<CounterButton/>)
+        output.push(<CounterButton NO ={i}></CounterButton>)
         return output;
 }
 
@@ -27,7 +27,7 @@ class CounterButton extends React.Component{
         var text = this.state.counter;
         return (
         <Button onClick = {this.handleClick}>
-        你點了{text}次.</Button>);
+        第{this.props.NO}個你點{text}次</Button>);
     }
 }
 
